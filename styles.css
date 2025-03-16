@@ -1,0 +1,359 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    position: relative;
+    z-index: 2;
+}
+/*main start*/
+
+/*홈 화면 비디오 설정*/
+.base-background {
+    background-color: black;
+}
+
+.videobox {
+    position: relative;
+    width: 100%;
+    height: 52vw;
+}
+
+video {
+    opacity: 0.6;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+}
+
+
+
+.slogan {
+    font-family: "Montserrat", sans-serif;
+    font-size: 10vw;
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+    color: white;
+    opacity: 1;
+    top: 18vw;
+}
+
+@media (max-width: 768px) {
+    .videobox {
+        height: 80vw;
+    }
+
+    .slogan {
+        top: 30vw;
+    }
+}
+
+/* index에 임시 이미지 */
+.background-image {
+    opacity: 0.6;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* 메인 본문 스타일 */
+.content {
+    width: 65%;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    font-family: "Noto Sans KR", sans-serif;
+}
+@media (max-width: 1024px) {
+    .content {
+        width: 80%;
+    }
+}
+@media (max-width: 768px) {
+    .content {
+        width: 95%;
+    }
+}
+
+/* 본문 제목 (서브 메뉴) */
+.content h2 {
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: 50px;
+}
+
+/* 제목과 콘텐츠 분리 선 */
+.contentline {
+    margin: 0 auto;
+    background-position: center;
+    width: 100%;
+    height: .5px;
+    background-color: #bdbdbd;
+    margin-bottom: 20px;
+}
+
+/* 게시판용 콘텐츠 분리 선 */
+.board-contentline {
+    margin: 0 auto;
+    background-position: center;
+    width: 100%;
+    height: .5px;
+    background-color: #bdbdbd;
+    margin-bottom: 7px;
+}
+
+.description {
+    text-align: justify;
+    line-height: 1.6;
+    font-weight: 400;
+    font-size: 11pt;
+    margin-bottom: 30px;
+}
+
+/* 연구 항목 리스트 */
+.research-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.research-item {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-placeholder {
+    min-width: 300px;
+    height: 150px;
+    background: #ccc;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.research-info h3 {
+    margin: 0;
+    font-size: 16pt;
+    font-weight: 500;
+}
+
+.research-info ul {
+    padding-left: 20px;
+    margin-top: 5px;
+}
+
+.research-info li {
+    font-size: 10pt;
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+
+/* 과제, 학회, 논문 리스트 스타일 */
+.project-list {
+    font-family: "Noto Sans KR";
+    font-size: 11pt;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* 과제, 학회, 논문 항목 */
+.project-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+/* 과제, 학회, 논문날짜 부분 */
+.list-date {
+    width: 20%;
+    min-width: 150px;
+    padding-left: 15px;
+    font-size: 12pt;
+}
+
+/* 과제명, 학회명, 논문명 부분 */
+.list-title {
+    width: 80%;
+    text-align: left;
+    word-break: keep-all;
+    line-height: 2;
+}
+
+/* 논문명 들여쓰기 설정 */
+.paper-title {
+    width: 100%;
+    text-align: left;
+    word-break: normal;
+    line-height: 2;
+    padding: 10px 0px 0px 40px;
+    text-indent: -40px
+}
+
+.pf-profile {
+    display: flex;
+    font-family: "Noto Sans KR";
+}
+
+.pf-profile h2 {
+    text-align: left;
+    font-size: 24pt;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.sub-descript {
+    font-size: 14pt;
+    font-weight: 400;
+}
+
+.pfimage-placeholder {
+    min-width: 210px;
+    height: 270px;
+    background: #ccc;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.experience h2 {
+    text-align: left;
+    margin: 20px;
+    font-family: "Noto Sans KR";
+    font-size: 14pt;
+}
+
+.experience ul {
+    font-family: "Noto Sans KR";
+    font-weight: 300;
+    font-size: 11pt;
+    margin-left: 40px;
+}
+
+/*학생, 졸업생 리스트*/
+.student-list {
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card {
+    display: flex;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    background-color: #ccc;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.stimage-placeholder {
+    display: flex;
+    width: 112px;
+    height: 144px;
+    background: #ccc;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card h2 {
+    text-align: left;
+    font-family: "Noto Sans KR";
+    font-weight: 500;
+    font-size: 18pt;
+    margin: 15px 0;
+}
+
+.st-info {
+    padding-left: 30px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.en-name {
+    font-size: 14pt;
+    font-weight: 400;
+}
+
+.card p {
+    font-size: 11pt;
+    margin: 5px 0;
+}
+
+/* 게시판 순서, 제목, 제목명, 글쓴이, 날짜 설정 */
+.board-num {
+    min-width: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
+
+.board-title {
+    min-width: 700px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
+
+.board-titlename {
+    min-width: 700px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: left;
+}
+
+.board-name {
+    min-width: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
+
+.board-date {
+    min-width: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
+
+/*main end*/

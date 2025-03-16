@@ -1,0 +1,141 @@
+/* header start */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    background-color: #333;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+/*로고 (타이틀)*/
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo_title {
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.5vw;
+}
+
+.logo_sub {
+    font-weight: 300;
+    font-size:0.75rem;
+}
+
+/* 메뉴바 */
+nav .menu {
+    list-style: none;
+    display: flex;
+}
+
+.menu>li {
+    position: relative;
+    margin-right: 1.6669rem;
+}
+.menu a {
+    color: white;
+    font-weight: 300;
+    font-size: 1.0831rem;
+    text-decoration: none;
+    padding: 10px;
+}
+
+/* 메뉴바 dropdown */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    list-style: none;
+    top: 100%;
+    left: 0;
+    width: 120px;
+}
+
+.dropdown-menu li {
+    text-align: left;
+}
+
+.dropdown-menu a {
+    display: block;
+    font-weight: 300;
+    font-size: 0.9169rem;
+    padding: 10px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* header end */
+
+/* footer start */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: normal;
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1100px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.footer-logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.footer-title {
+    font-family: "Montserrat";
+    margin: 0;
+}
+
+.footer-title h2 {
+    font-weight: 600;
+    font-size: 1.3331rem;
+}
+
+.footer-title p {
+    font-weight: 300;
+    font-size: 0.6669rem;
+}
+
+.footer-divider {
+    width: 1px;
+    height: 70px;
+    background-color: #fff;
+    margin: 0 30px;
+}
+
+.footer-contact {
+    flex: 2;
+    font-family: "Noto-Sans-KR";
+    font-weight: 300;
+    font-size: 0.75rem;
+    line-height: 1.6;
+}
+
+/* footer end */
