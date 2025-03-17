@@ -4,10 +4,11 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     position: relative;
     z-index: 2;
 }
+
 /*main start*/
 
 /*홈 화면 비디오 설정*/
@@ -73,16 +74,19 @@ video {
     border-radius: 8px;
     font-family: "Noto Sans KR", sans-serif;
 }
+
 @media (max-width: 1024px) {
     .content {
         width: 80%;
     }
 }
+
 @media (max-width: 768px) {
     .content {
         width: 95%;
     }
 }
+
 
 /* 본문 제목 (서브 메뉴) */
 .content h2 {
@@ -129,6 +133,7 @@ video {
 }
 
 .research-item {
+    min-height: 10vw;
     display: flex;
     align-items: center;
     background: #fff;
@@ -143,6 +148,11 @@ video {
     background: #ccc;
     border-radius: 8px;
     margin-right: 20px;
+}
+
+.re-image {
+    width: 20vw;
+    padding-right: 2vw;
 }
 
 .research-info h3 {
@@ -182,19 +192,12 @@ video {
 
 /* 과제, 학회, 논문날짜 부분 */
 .list-date {
-    width: 20%;
+    display: flex;
     min-width: 150px;
     padding-left: 15px;
     font-size: 12pt;
 }
 
-/* 과제명, 학회명, 논문명 부분 */
-.list-title {
-    width: 80%;
-    text-align: left;
-    word-break: keep-all;
-    line-height: 2;
-}
 
 /* 논문명 들여쓰기 설정 */
 .paper-title {
@@ -204,6 +207,24 @@ video {
     line-height: 2;
     padding: 10px 0px 0px 40px;
     text-indent: -40px
+}
+
+.project-title {
+    width: 100%;
+    text-align: left;
+    word-break: normal;
+    line-height: 2;
+    padding: 10px 0px 0px 100px;
+    text-indent: -100px
+}
+
+.conference-title {
+    width: 100%;
+    text-align: left;
+    word-break: normal;
+    line-height: 2;
+    padding: 10px 0px 0px 65px;
+    text-indent: -65px
 }
 
 .pf-profile {
@@ -229,6 +250,11 @@ video {
     background: #ccc;
     border-radius: 8px;
     margin-right: 20px;
+}
+
+.pfphoto {
+    width: 20vw;
+    padding-right: 10pt;
 }
 
 .experience h2 {
@@ -357,3 +383,118 @@ video {
 }
 
 /*main end*/
+
+@media (max-width: 360px) {
+    .content {
+        margin: 5px auto;
+        padding: 5px;
+    }
+
+    .content h2 {
+        font-size: 6vw;
+        margin-bottom: 10px;
+    }
+
+    .list-date {
+        font-size: 2.5vw;
+    }
+
+    .project-list {
+        font-size: 2.5vw;
+        gap: 3px;
+    }
+
+    .project-title {
+        width: 100%;
+        text-align: left;
+        word-break: normal;
+        line-height: 2;
+        padding: 10px 0px 0px 85px;
+        text-indent: -85px
+    }
+
+    .paper-title {
+        font-size: 2.5vw;
+    }
+
+    .conference-title {
+        width: 100%;
+        text-align: left;
+        word-break: normal;
+        line-height: 2;
+        padding: 10px 0px 0px 40px;
+        text-indent: -40px;
+        font-size: 2.5vw;
+    }
+
+    .description {
+        font-size: 2.5vw;
+    }
+
+    .experience ul {
+        margin: 20px;
+        line-height: 2;
+        font-size: 2.5vw;
+    }
+    .pf-profile{
+        display: inline;
+    }
+    .pfphoto{
+        width: 100%;
+        padding: 0;
+        align-items: center;
+    }
+    .experience h2 {
+        margin: 5px;
+        font-size: 4vw;
+    }
+
+    .pf-profile h2 {
+        font-size: 6vw;
+    }
+    .sub-descript{
+        font-size: 4vw;
+    }
+    .student-list {
+        padding: 5px;
+    }
+    .card h2 {
+        font-size: 5vw;
+        margin: 5px 0 15px;
+    }
+    .en-name {
+        font-size: 4vw;
+    }
+    .card p {
+        font-size: 2.5vw;
+    }
+    .st-info{
+        padding-left: 10px;
+    }
+    .stimage-placeholder{
+        width: 77px;
+        height: 100px;
+    }
+    .research-item{
+        display: inline;
+    }
+    .re-image{
+        width: 100%
+    }
+    .research-info h3 {
+        font-size: 4.5vw;
+    }
+    
+    .research-info ul {
+        padding-left: 20px;
+        margin-top: 5px;
+    }
+    
+    .research-info li {
+        font-size: 2.5vw;
+    }
+    .gallery-image{
+        align-items: center;
+        width: 100%;
+    }
+}
