@@ -1,0 +1,717 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    z-index: 2;
+}
+
+/*main start*/
+
+/*홈 화면 비디오 설정*/
+.base-background {
+    background-color: black;
+}
+
+.videobox {
+    position: relative;
+    width: 100%;
+    height: 52vw;
+}
+
+video {
+    opacity: 0.6;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+}
+
+
+
+.slogan {
+    font-family: "Montserrat", sans-serif;
+    font-size: 10vw;
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+    color: white;
+    opacity: 1;
+    top: 18vw;
+}
+
+@media (max-width: 768px) {
+    .videobox {
+        height: 80vw;
+    }
+
+    .slogan {
+        top: 30vw;
+    }
+}
+
+/* index에 임시 이미지 */
+.background-image {
+    opacity: 0.6;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* 이미지 리스트 컨테이너 */
+.main .sec1-2 .p1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.main .sec1-2 .lists {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* 이미지 리스트 가로 배치 */
+.main .sec1-2 .lists ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px; /* 이미지 간격 */
+}
+
+/* 각 이미지 애니메이션 효과 */
+.main .sec1-2 .lists ul li {
+    opacity: 0; /* 처음에는 안 보이게 설정 */
+    transform: translateY(50px); /* 아래에서 시작 */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* 애니메이션 활성화 */
+.main .sec1-2 .lists.ani.active ul li {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 순차적 딜레이 */
+.main .sec1-2 .lists.ani.active ul li:nth-child(1) {
+    transition-delay: 0.1s;
+}
+.main .sec1-2 .lists.ani.active ul li:nth-child(2) {
+    transition-delay: 0.2s;
+}
+.main .sec1-2 .lists.ani.active ul li:nth-child(3) {
+    transition-delay: 0.3s;
+}
+.main .sec1-2 .lists.ani.active ul li:nth-child(4) {
+    transition-delay: 0.4s;
+}
+.main .sec1-2 .lists.ani.active ul li:nth-child(5) {
+    transition-delay: 0.5s;
+}
+.main .sec1-2 .lists.ani.active ul li:nth-child(6) {
+    transition-delay: 0.6s;
+}
+
+/* 메인 본문 스타일 */
+.content {
+    width: 65%;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+@media (max-width: 1024px) {
+    .content {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .content {
+        width: 95%;
+    }
+}
+
+
+/* 본문 제목 (서브 메뉴) */
+.content h2 {
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: 50px;
+}
+
+/* 제목과 콘텐츠 분리 선 */
+.contentline {
+    margin: 0 auto;
+    background-position: center;
+    width: 100%;
+    height: .5px;
+    background-color: #bdbdbd;
+    margin-bottom: 20px;
+}
+
+/* 게시판용 콘텐츠 분리 선 */
+.board-contentline {
+    margin: 0 auto;
+    background-position: center;
+    width: 100%;
+    height: .5px;
+    background-color: #bdbdbd;
+    margin-bottom: 7px;
+}
+
+.description {
+    text-align: justify;
+    line-height: 1.6;
+    font-weight: 400;
+    font-size: 11pt;
+    margin-bottom: 30px;
+}
+
+/* 연구 항목 리스트 */
+.research-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.research-item {
+    min-height: 10vw;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-placeholder {
+    min-width: 300px;
+    height: 150px;
+    background: #ccc;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.re-image {
+    width: 20vw;
+    padding-right: 2vw;
+}
+
+.research-info h3 {
+    margin: 0;
+    font-size: 16pt;
+    font-weight: 500;
+}
+
+.research-info ul {
+    padding-left: 20px;
+    margin-top: 5px;
+}
+
+.research-info li {
+    font-size: 10pt;
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+
+/* 과제, 학회, 논문 리스트 스타일 */
+.project-list {
+    font-family: "Noto Sans KR";
+    font-size: 11pt;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* 과제, 학회, 논문 항목 */
+.project-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+/* 과제, 학회, 논문날짜 부분 */
+.list-date {
+    display: flex;
+    min-width: 150px;
+    padding-left: 15px;
+    font-size: 12pt;
+}
+
+
+/* 논문명 들여쓰기 설정 */
+.paper-title {
+    width: 100%;
+    text-align: left;
+    word-break: normal;
+    line-height: 2;
+    padding: 10px 0px 0px 40px;
+    text-indent: -40px
+}
+
+.project-title {
+    width: 100%;
+    text-align: left;
+    word-break: normal;
+    line-height: 2;
+    padding: 10px 0px 0px 100px;
+    text-indent: -100px
+}
+
+.conference-title {
+    width: 100%;
+    text-align: left;
+    word-break: normal;
+    line-height: 2;
+    padding: 10px 0px 0px 65px;
+    text-indent: -65px
+}
+
+.pf-profile {
+    display: flex;
+    font-family: "Noto Sans KR";
+}
+
+.pf-profile h2 {
+    text-align: left;
+    font-size: 24pt;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.sub-descript {
+    font-size: 14pt;
+    font-weight: 400;
+}
+
+.pfimage-placeholder {
+    min-width: 210px;
+    height: 270px;
+    background: #ccc;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.pfphoto {
+    width: 20vw;
+    padding-right: 10pt;
+}
+
+.experience h2 {
+    text-align: left;
+    margin: 20px;
+    font-family: "Noto Sans KR";
+    font-size: 14pt;
+}
+
+.experience ul {
+    font-family: "Noto Sans KR";
+    font-weight: 300;
+    font-size: 11pt;
+    margin-left: 40px;
+}
+
+/*학생, 졸업생 리스트*/
+.student-list {
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card {
+    display: flex;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    background-color: #ccc;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.stimage-placeholder {
+    display: flex;
+    width: 112px;
+    height: 144px;
+    background: #ccc;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card h2 {
+    text-align: left;
+    font-family: "Noto Sans KR";
+    font-weight: 500;
+    font-size: 18pt;
+    margin: 15px 0;
+}
+
+.st-info {
+    padding-left: 30px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.en-name {
+    font-size: 14pt;
+    font-weight: 400;
+}
+
+.card p {
+    font-size: 11pt;
+    margin: 5px 0;
+}
+
+/* 게시판 순서, 제목, 제목명, 글쓴이, 날짜 설정 */
+.board-num {
+    min-width: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
+
+.board-title {
+    min-width: 700px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
+
+.board-titlename {
+    min-width: 700px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: left;
+}
+
+.board-name {
+    min-width: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
+
+.board-date {
+    min-width: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
+
+/*main end*/
+@media (max-width: 768px) {
+    .content {
+        margin: 30px;
+        padding: 10px;
+    }
+
+    .re-image{
+        min-width: 29vw;
+    }
+
+    .description-extra{
+        display : flex;
+        flex-direction: column;
+        min-width: 100%;
+    }
+
+    .grid{
+        max-width: 100%;
+    }
+    
+    .card {
+        display: flex;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: left;
+    }
+
+    .card img {
+        width: 100%;
+        height: 150px;
+        background-color: #ccc;
+        border-radius: 8px;
+        object-fit: cover;
+    }
+
+    .stimage-placeholder {
+        display: flex;
+        width: 87.5px;
+        height: 112.5px;
+        background: #ccc;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .card h2 {
+        text-align: left;
+        font-family: "Noto Sans KR";
+        font-weight: 500;
+        font-size: 16pt;
+        margin: 15px 0;
+    }
+
+    .st-info {
+        padding-left: 10px;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .en-name {
+        font-size: 12pt;
+        font-weight: 400;
+    }
+
+    .card p {
+        font-size: 8pt;
+        margin: 5px 0;
+    }
+    .pfphoto {
+    width: 39vw;
+    padding-right: 10pt;
+    }
+
+    .board-num {
+        min-width: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+    }
+
+    .board-title {
+        min-width: 450px;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+    }
+
+    .board-titlename {
+        min-width: 450px;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: left;
+    }
+
+    .board-name {
+        min-width: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+    }   
+
+    .board-date {
+        min-width: 100px;
+        padding-left: 0px;
+        padding-right: 20px;
+        text-align: center;
+    }
+
+    .gallery-image{
+        width: 336px;
+        height: 480px;
+        min-width: 336px;
+        min-height: 480px;
+        align-items: center;
+    }
+}
+
+
+@media (max-width: 420px) {
+    .content {
+        margin: 5px auto;
+        padding: 5px;
+        margin-bottom: 20px;
+    }
+
+    .content h2 {
+        font-size: 6vw;
+        margin-bottom: 10px;
+    }
+
+    .list-date {
+        font-size: 2.5vw;
+    }
+
+    .project-list {
+        font-size: 2.3vw;
+        gap: 3px;
+    }
+
+    .project-title {
+        width: 100%;
+        text-align: left;
+        word-break: normal;
+        line-height: 2;
+        padding: 10px 0px 0px 85px;
+        text-indent: -85px
+    }
+
+    .paper-title {
+        font-size: 2.5vw;
+    }
+
+    .conference-title {
+        width: 100%;
+        text-align: left;
+        word-break: normal;
+        line-height: 2;
+        padding: 10px 0px 0px 40px;
+        text-indent: -40px;
+        font-size: 2.5vw;
+    }
+
+    .description {
+        font-size: 2.5vw;
+    }
+
+    .experience ul {
+        margin: 20px;
+        line-height: 2;
+        font-size: 2.5vw;
+    }
+    .pf-profile{
+        display: inline;
+    }
+    .pfphoto{
+        width: 100%;
+        padding: 0;
+        align-items: center;
+    }
+    .experience h2 {
+        margin: 5px;
+        font-size: 4vw;
+    }
+
+    .pf-profile h2 {
+        font-size: 6vw;
+    }
+    .sub-descript{
+        font-size: 4vw;
+    }
+    .student-list {
+        padding: 5px;
+    }
+    .card h2 {
+        font-size: 5vw;
+        margin: 5px 0 15px;
+    }
+    .en-name {
+        font-size: 4vw;
+    }
+    .card p {
+        font-size: 2.5vw;
+    }
+    .st-info{
+        padding-left: 10px;
+    }
+    .stimage-placeholder{
+        width: 77px;
+        height: 100px;
+    }
+    .research-item{
+        display: inline;
+    }
+    .re-image{
+        width: 100%
+    }
+    .research-info h3 {
+        font-size: 4.5vw;
+    }
+    
+    .research-info ul {
+        padding-left: 20px;
+        margin-top: 5px;
+    }
+    
+    .research-info li {
+        font-size: 2.5vw;
+    }
+    .gallery-image{
+        align-items: center;
+        width: 100%;
+    }
+    .board-num {
+        min-width: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+    }
+
+    .board-title {
+        min-width: 150px;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+    }
+
+    .board-titlename {
+        min-width: 150px;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: left;
+    }
+
+    .board-name {
+        min-width: 40px;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+    }   
+
+    .board-date {
+        min-width: 60px;
+        padding-left: 0px;
+        padding-right: 20px;
+        text-align: center;
+    }
+    
+    .gallery-item{
+        padding-bottom: 15px;
+    }
+
+    .gallery-image {
+        width: 100%;
+        height: 100%;
+        min-width: 100%;
+        min-height: 100%;
+    }
+}

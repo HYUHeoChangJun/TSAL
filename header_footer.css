@@ -1,0 +1,318 @@
+/* header start */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    background-color: #333;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.hamburger {
+    display: none;
+}
+
+/*로고 (타이틀)*/
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo_title {
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.5vw;
+}
+
+.logo_sub {
+    font-weight: 300;
+    font-size: 0.725vw;
+}
+
+.menu-toggle {
+    display: none;
+    /* 기본적으로 안 보이게 설정 */
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* 메뉴바 */
+nav .menu {
+    list-style: none;
+    display: flex;
+}
+
+.menu>li {
+    position: relative;
+    margin-right: 1.6669rem;
+}
+
+.menu a {
+    color: white;
+    font-weight: 300;
+    font-size: 1vw;
+    text-decoration: none;
+    padding: 10px;
+}
+
+/* 메뉴바 dropdown */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    list-style: none;
+    top: 100%;
+    left: 0;
+    width: 120px;
+}
+
+.dropdown-menu li {
+    text-align: left;
+}
+
+.dropdown-menu a {
+    display: block;
+    font-weight: 300;
+    font-size: 0.8rem;
+    padding: 10px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* header end */
+
+/* footer start */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: normal;
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1100px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.footer-logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.footer-title {
+    font-family: "Montserrat";
+    margin: 0;
+}
+
+.footer-title h2 {
+    font-weight: 600;
+    font-size: 1.3331rem;
+}
+
+.footer-title p {
+    font-weight: 300;
+    font-size: 0.6669rem;
+}
+
+.footer-divider {
+    width: 1px;
+    height: 70px;
+    background-color: #fff;
+    margin: 0 30px;
+}
+
+.footer-contact {
+    flex: 2;
+    font-family: "Noto-Sans-KR";
+    font-weight: 300;
+    font-size: 0.75rem;
+    line-height: 1.6;
+}
+
+/* footer end */
+
+@media (max-width: 768px) {
+    .logo_title {
+        cursor: pointer;
+        text-decoration: none;
+        color: #fff;
+        font-weight: 600;
+        font-size: 2.5vw;
+    }
+
+    .logo_sub {
+        font-weight: 300;
+        font-size: 1.4vw;
+    }
+
+    .menu a {
+        color: white;
+        font-weight: 300;
+        font-size: 1.5vw;
+        text-decoration: none;
+        padding: 7px;
+    }
+}
+
+@media (max-width: 420px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 10px;
+        background-color: #333;
+        font-family: "Montserrat", sans-serif;
+        color: white;
+        position: relative;
+        z-index: 1;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    .logo_title {
+        cursor: pointer;
+        text-decoration: none;
+        color: #fff;
+        font-weight: 600;
+        font-size: 6vw;
+    }
+
+    .logo_sub {
+        font-weight: 300;
+        font-size: 2vw;
+        margin-right: 100px;
+    }
+    /* 기존 메뉴 숨기기 */
+    .menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #222;
+        flex-direction: column;
+        padding: 5px 0;
+        z-index: 1000;
+
+    }
+
+    #menu.active {
+        display: flex;
+    }
+
+    /* 드롭다운 메뉴 스타일 */
+    .dropdown-menu {
+        display: none;
+    }
+
+    .dropdown-menu.open {
+        display: block;
+    }
+
+    .menu a {
+        font-size: 2.5vw;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        width: auto;
+    }
+
+    .menu ul li {
+        width: 100%;
+        text-align: left;
+    }
+
+    .menu ul li a {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        color: white;
+        text-decoration: none;
+        border-bottom: 1px solid #666;
+        width: auto;
+        font-size: 2vw;
+    }
+
+    /* 하위 메뉴도 세로로 정렬 */
+    .dropdown-menu {
+        position: static;
+        width: 100%;
+        display: none;
+        background: #444;
+    }
+
+    .dropdown-menu li {
+        width: 100%;
+    }
+
+    .menu .dropdown a {
+        cursor: pointer;
+    }
+    .nav{
+        display: none;
+    }
+
+
+    footer {
+        padding: 10px 20px;
+        display: flex;
+        justify-content: normal;
+    }
+    
+    .footer-container {
+        display: inline;
+        align-items: center;
+        width: 100%;
+        max-width: 1100px;
+    }
+    
+    .footer-logo {
+        display: flex;
+        align-items: center;
+        flex: 1;
+    }
+    
+    .footer-title h2 {
+        font-size: 5vw;
+    }
+    
+    .footer-title p {
+        font-size: 3vw;
+    }
+    
+    .footer-divider {
+        width: 300px;
+        height: 1px;
+        background-color: #fff;
+        margin: 10px 0 10px 0;
+    }
+    
+    .footer-contact {
+        font-size: 2.3vw;
+        line-height: 1.6;
+    }
+}

@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+}
+
+/* 이미지 리스트 컨테이너 */
+.main .sec1-2 .lists {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* 이미지 리스트 가로 배치 */
+.main .sec1-2 .lists ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px; /* 이미지 간격 */
+}
+
+/* 각 이미지 애니메이션 효과 */
+.main .sec1-2 .lists ul li {
+    opacity: 0; /* 처음에는 안 보이게 설정 */
+    transform: translateY(50px); /* 아래에서 시작 */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* 애니메이션 활성화 */
+.main .sec1-2 .lists.ani.active ul li {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 순차적 딜레이 */
+.main .sec1-2 .lists.ani.active ul li:nth-child(1) {
+    transition-delay: 0.1s;
+}
+.main .sec1-2 .lists.ani.active ul li:nth-child(2) {
+    transition-delay: 0.2s;
+}
+.main .sec1-2 .lists.ani.active ul li:nth-child(3) {
+    transition-delay: 0.3s;
+}
+.main .sec1-2 .lists.ani.active ul li:nth-child(4) {
+    transition-delay: 0.4s;
+}
+.main .sec1-2 .lists.ani.active ul li:nth-child(5) {
+    transition-delay: 0.5s;
+}

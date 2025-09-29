@@ -1,0 +1,100 @@
+/*각 페이지 서브 헤더*/
+.sub-header {
+    background-image: url('images/about-banner.jpg');
+    /* 배경 이미지 */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 5.625rem 1.25rem 3.75rem 1.25rem;
+    color: white;
+}
+
+.sub-header h1 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 2.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.sub-header p {
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 300;
+    font-size: 0.9169rem;
+    margin-top: 0.25rem;
+}
+
+.sub-headerline {
+    margin: 0 auto;
+    background-position: center;
+    width: 90px;
+    height: 1.5px;
+    background-color: #fff;
+}
+
+/* 서브 메뉴 스타일 */
+.sub-menu {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    padding: 0 1.25rem 0 1.25rem;
+    background-color: #333;
+    align-items: center;
+    justify-content: center;
+}
+
+.sub-menu a {
+    text-decoration: none;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    min-width: 300px;
+    text-align: center;
+    font-size: 1.1669rem;
+    font-weight: 500;
+    padding: 15px 50px;
+    border-bottom: 2px solid transparent;
+}
+
+/* 서브 메뉴 현재 페이지 표시 */
+.sub-menu a.active {
+    border-top: 2px solid white;
+}
+@media (max-width: 768px){
+    .sub-menu {
+        gap: 0px;
+    }
+
+    .sub-menu a{
+        font-size: 1.7vw;
+        min-width: 180px;
+        padding: 20px;
+    }
+}
+@media (max-width: 420px) {
+    .sub-header{
+        padding: 1.5rem 1.25rem 1.25rem 1.5rem;
+    }
+    .sub-header h1 {
+        font-size: 6vw;
+    }
+    .sub-header p {
+        font-size: 2.3vw;
+        margin-top: 0.25rem;
+    }
+    .sub-headerline {
+        width: 50px;
+        height: 1px;
+    }
+    .sub-menu{
+        gap: 30px;
+    }
+    .sub-menu a {
+        font-size: 2.1vw;
+        min-width: 60px;
+        padding: 10px 0px;
+        border-bottom: 2px solid transparent;
+    }
+    .sub-menu a.active {
+        border-top: 1px solid white;
+
+    }
+}
