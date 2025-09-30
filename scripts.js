@@ -88,3 +88,53 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.observe(lists);
     }
 });
+
+// 📌 게시판 목록 로딩 함수
+function loadPostList() {
+  fetch("posts.json")
+    .then(res => res.json())
+    .then(posts => {
+      const tbody = document.getElementById("post-list");
+      if (!tbody) return;
+
+      posts.forEach(post => {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td>${post.id}</td>
+          <td class="title" onclick="location.href='view.html?id=${post.id}'">${post.title}</td>
+          <td>${post.author}</td>
+          <td>${post.date}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+    });
+}
+
+// 📌 게시물 상세 로딩 함수
+function loadPostDetail() {
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get("id");
+
+  fetch("posts.json")
+    .then(res => res.json())
+    .then(posts => {
+      const post = posts.find(p => p.id == id);
+      if (post) {
+        document.getElementById("post-title").innerText = post.title;
+        document.getElementById("post-meta").innerText = `${post.author} | ${post.date}`;
+        document.getElementById("post-content").innerText = post.content;
+      } else {
+        document.getElementById("post-title").innerText = "글을 찾을 수 없습니다.";
+      }
+    });
+}
+
+// 📌 DOM 로드 후 실행
+document.addEventListener("DOMContentLoaded", () => {
+  if (document.getElementById("post-list")) {
+    loadPostList();
+  }
+  if (document.getElementById("post-title")) {
+    loadPostDetail();
+  }
+});

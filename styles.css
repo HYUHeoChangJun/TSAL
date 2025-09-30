@@ -151,7 +151,7 @@ video {
     margin-bottom: 50px;
 }
 
-/* 제목과 콘텐츠 분리 선 */
+/* 제목과 콘텐츠 분리 선 */ 
 .contentline {
     margin: 0 auto;
     background-position: center;
@@ -400,42 +400,40 @@ video {
     margin: 5px 0;
 }
 
-/* 게시판 순서, 제목, 제목명, 글쓴이, 날짜 설정 */
-.board-num {
-    min-width: 100px;
-    padding-left: 20px;
-    padding-right: 20px;
-    text-align: center;
+.board {
+    font-family: "Noto Sans KR";
+}
+.board table {
+    width: 100%;
+    border-collapse: collapse;
 }
 
-.board-title {
-    min-width: 700px;
-    padding-left: 20px;
-    padding-right: 20px;
+.board th,td {
     text-align: center;
+    border-bottom: 1px solid #ddd;
+    padding: 0.5vw;
 }
 
-.board-titlename {
-    min-width: 700px;
-    padding-left: 20px;
-    padding-right: 20px;
+td.title {
+    text-align: left; 
+}
+
+td.title:hover { 
+    cursor: pointer;
+    text-decoration: underline; 
+}
+
+.post h2 {
+    font-size: 1vw;
     text-align: left;
+    padding-left: 5%;
 }
 
-.board-name {
-    min-width: 100px;
-    padding-left: 20px;
-    padding-right: 20px;
-    text-align: center;
+.meta {
+    font-size: 0.7vw;
+    text-align: left;
+    padding-left: 5%;
 }
-
-.board-date {
-    min-width: 100px;
-    padding-left: 20px;
-    padding-right: 20px;
-    text-align: center;
-}
-
 /*main end*/
 @media (max-width: 1024px) {
     .content {
@@ -510,47 +508,18 @@ video {
     padding-right: 10pt;
     }
 
-    .board-num {
-        min-width: 50px;
-        padding-left: 20px;
-        padding-right: 20px;
-        text-align: center;
-    }
-
-    .board-title {
-        min-width: 450px;
-        padding-left: 20px;
-        padding-right: 20px;
-        text-align: center;
-    }
-
-    .board-titlename {
-        min-width: 450px;
-        padding-left: 20px;
-        padding-right: 20px;
-        text-align: left;
-    }
-
-    .board-name {
-        min-width: 50px;
-        padding-left: 20px;
-        padding-right: 20px;
-        text-align: center;
-    }   
-
-    .board-date {
-        min-width: 100px;
-        padding-left: 0px;
-        padding-right: 20px;
-        text-align: center;
-    }
-
     .gallery-image{
         width: 336px;
         height: 480px;
         min-width: 336px;
         min-height: 480px;
         align-items: center;
+    }
+    .board th,td {
+        padding: 1vw;
+    }
+    .post h2 {
+        font-size: 2vw;
     }
 }
 
@@ -668,40 +637,6 @@ video {
         align-items: center;
         width: 100%;
     }
-    .board-num {
-        min-width: 30px;
-        padding-left: 20px;
-        padding-right: 20px;
-        text-align: center;
-    }
-
-    .board-title {
-        min-width: 150px;
-        padding-left: 20px;
-        padding-right: 20px;
-        text-align: center;
-    }
-
-    .board-titlename {
-        min-width: 150px;
-        padding-left: 20px;
-        padding-right: 20px;
-        text-align: left;
-    }
-
-    .board-name {
-        min-width: 40px;
-        padding-left: 20px;
-        padding-right: 20px;
-        text-align: center;
-    }   
-
-    .board-date {
-        min-width: 60px;
-        padding-left: 0px;
-        padding-right: 20px;
-        text-align: center;
-    }
     
     .gallery-item{
         padding-bottom: 15px;
@@ -712,5 +647,8 @@ video {
         height: 100%;
         min-width: 100%;
         min-height: 100%;
+    }
+    .post h2 {
+        font-size: 3vw;
     }
 }
