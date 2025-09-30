@@ -155,7 +155,7 @@ footer {
 
 /* footer end */
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .logo_title {
         cursor: pointer;
         text-decoration: none;
@@ -178,7 +178,7 @@ footer {
     }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 430px) {
     header {
         display: flex;
         justify-content: space-between;
@@ -197,7 +197,7 @@ footer {
         text-decoration: none;
         color: #fff;
         font-weight: 600;
-        font-size: 6vw;
+        font-size: 4vw;
     }
 
     .logo_sub {
@@ -297,7 +297,7 @@ footer {
     }
     
     .footer-title h2 {
-        font-size: 5vw;
+        font-size: 4vw;
     }
     
     .footer-title p {

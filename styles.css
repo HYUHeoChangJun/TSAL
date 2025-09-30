@@ -131,13 +131,13 @@ video {
 
 @media (max-width: 1024px) {
     .content {
-        width: 80%;
+        width: 95%;
     }
 }
 
 @media (max-width: 768px) {
     .content {
-        width: 95%;
+        width: 90%;
     }
 }
 
@@ -437,7 +437,7 @@ video {
 }
 
 /*main end*/
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .content {
         margin: 30px;
         padding: 10px;
@@ -555,7 +555,7 @@ video {
 }
 
 
-@media (max-width: 420px) {
+@media (max-width: 430px) {
     .content {
         margin: 5px auto;
         padding: 5px;
@@ -602,7 +602,6 @@ video {
     .description {
         font-size: 2.5vw;
     }
-
     .experience ul {
         margin: 20px;
         line-height: 2;
