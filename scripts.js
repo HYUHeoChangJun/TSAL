@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
     const dropdowns = document.querySelectorAll(".dropdown");
-
+    // dropdown menu
     dropdowns.forEach(dropdown => {
         dropdown.addEventListener("mouseenter", () => {
             dropdown.querySelector(".dropdown-menu").style.display = "block";
@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-// 📌 게시판 목록 로딩 함수
+// 게시판 목록 로딩 함수
 function loadPostList() {
   fetch("posts.json")
     .then(res => res.json())
@@ -110,7 +110,7 @@ function loadPostList() {
     });
 }
 
-// 📌 게시물 상세 로딩 함수
+// 게시물 상세 로딩 함수
 function loadPostDetail() {
   const params = new URLSearchParams(window.location.search);
   const id = params.get("id");
@@ -129,7 +129,7 @@ function loadPostDetail() {
     });
 }
 
-// 📌 DOM 로드 후 실행
+// DOM 로드 후 실행
 document.addEventListener("DOMContentLoaded", () => {
   if (document.getElementById("post-list")) {
     loadPostList();
@@ -137,4 +137,59 @@ document.addEventListener("DOMContentLoaded", () => {
   if (document.getElementById("post-title")) {
     loadPostDetail();
   }
+});
+
+// Modal Module
+const Modal = (() => {
+  let modal;
+
+  function init() {
+    modal = document.getElementById("modal");
+    if (!modal) return;
+
+    modal.querySelector(".close").addEventListener("click", close);
+    modal.addEventListener("click", e => {
+      if (e.target === modal) close();
+    });
+  }
+
+  function open(data) {
+    document.getElementById("modal-name").innerText = data.name
+    document.getElementById("modal-enName").innerText = data.enName
+    document.getElementById("modal-role").innerText = data.role;
+    document.getElementById("modal-desc").innerText = data.desc;
+    document.getElementById("modal-email").innerText =
+      `Email: ${data.email}`;
+
+    modal.style.display = "block";
+  }
+
+  function close() {
+    modal.style.display = "none";
+  }
+
+  return { init, open };
+})();
+
+
+// Card → Modal 연결
+function initCardModal() {
+  fetch("students.json")
+    .then(res => res.json())
+    .then(data => {
+      document.querySelectorAll(".card").forEach(card => {
+        card.addEventListener("click", () => {
+          const id = card.dataset.id;
+          if (data[id]) {
+            Modal.open(data[id]);
+          }
+        });
+      });
+    });
+}
+
+// Init
+document.addEventListener("DOMContentLoaded", () => {
+  Modal.init();
+  initCardModal();
 });

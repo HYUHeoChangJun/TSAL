@@ -122,6 +122,7 @@ video {
 /* 메인 본문 스타일 */
 .content {
     width: 65%;
+    min-height: 332px;
     margin: 50px auto;
     background: white;
     padding: 20px;
@@ -358,6 +359,13 @@ video {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
     text-align: left;
+    transition: all 0.25s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    transform: translateY(-4px);
 }
 
 .card img {
@@ -398,6 +406,58 @@ video {
 .card p {
     font-size: 11pt;
     margin: 5px 0;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modalname {
+    text-align: left;
+    font-family: "Noto Sans KR";
+    font-weight: 500;
+    font-size: 18pt;
+}
+
+.modal-title {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.modal-descript {
+    font-size: 11pt;
+    margin: 5px 0;
+}
+
+.modal-content {
+  background: #fff;
+  max-width: 50%;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.close {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal-body {
+  display: flex;
+  gap: 20px;
+}
+
+.modal-image {
+  min-width: 112px;
+  min-height: 144px;
+  background: #ddd;
+  border-radius: 6px;
 }
 
 .board {
@@ -650,5 +710,9 @@ td.title:hover {
     }
     .post h2 {
         font-size: 3vw;
+    }
+    .modal-body {
+        flex-direction: column;
+        align-items: center;
     }
 }

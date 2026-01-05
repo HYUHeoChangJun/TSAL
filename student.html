@@ -34,16 +34,16 @@
         <div class="contentline"></div>
         <div class="student-list">
             <div class="grid">
-                <div class="card">
+                <div class="card" data-id="KWK">
                     <div class="stimage-placeholder"></div>
                     <div class="st-info">
                         <h2>김우경 <span class="en-name">Wookyung Kim</span></h2>
                         <p>Master's student</p>
                         <p>Sample text sample text</p>
-                        <p>Email: sample@hanyang.ac.kr</p>
+                        <p>Email: kildeok@hanyang.ac.kr</p>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" data-id="YYC">
                     <div class="stimage-placeholder"></div>
                     <div class="st-info">
                         <h2>양윤철 <span class="en-name">Yunchul Yang</span></h2>
@@ -52,34 +52,43 @@
                         <p>Email: yun010124@hanyang.ac.kr</p>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" data-id="SYW">
                     <div class="stimage-placeholder"></div>
                     <div class="st-info">
                         <h2>서영운 <span class="en-name">Youngwoon Seo</span></h2>
-                        <p>Undergraduate student</p>
+                        <p>Master's student</p>
                         <p>Sample text sample text</p>
                         <p>Email: sample@sample.com</p>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" data-id="HCJ">
                     <div class="stimage-placeholder"></div>
                     <div class="st-info">
                         <h2>허창준 <span class="en-name">Changjun Heo</span></h2>
-                        <p>Undergraduate student</p>
+                        <p>Master's student</p>
                         <p>Sample text sample text</p>
                         <p>Email: gjckdwns1@hanyang.ac.kr</p>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" data-id="KKW">
                     <div class="stimage-placeholder"></div>
                     <div class="st-info">
                         <h2>고건우 <span class="en-name">Keonwoo Koh</span></h2>
-                        <p>Undergraduate student</p>
+                        <p>Master's student</p>
                         <p>Sample text sample text</p>
                         <p>Email: sample@sample.com</p>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" data-id="KKK">
+                    <div class="stimage-placeholder"></div>
+                    <div class="st-info">
+                        <h2>김김김 <span class="en-name">Sample Text</span></h2>
+                        <p>Master's student</p>
+                        <p>Sample text sample text</p>
+                        <p>Email: sample@sample.com</p>
+                    </div>
+                </div>
+                <div class="card" data-id="OWJ">
                     <div class="stimage-placeholder"></div>
                     <div class="st-info">
                         <h2>오원준 <span class="en-name">Wonjun Oh</span></h2>
@@ -88,13 +97,43 @@
                         <p>Email: jingojun@hanyang.ac.kr</p>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" data-id="KSE">
                     <div class="stimage-placeholder"></div>
                     <div class="st-info">
                         <h2>김성은 <span class="en-name">Seongeun Kim</span></h2>
                         <p>Undergraduate student</p>
                         <p>Sample text sample text</p>
                         <p>Email: sample@sample.com</p>
+                    </div>
+                </div>
+                <div class="card" data-id="LDW">
+                    <div class="stimage-placeholder"></div>
+                    <div class="st-info">
+                        <h2>이다원 <span class="en-name">Dawon Lee</span></h2>
+                        <p>Undergraduate student</p>
+                        <p>Sample text sample text</p>
+                        <p>Email: sample@sample.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--modal part-->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+
+                <div class="modal-body">
+                    <div class="modal-image"></div>
+                    <div class="modal-info">
+                        <div class="modal-title">
+                            <p id="modal-name" class="modalname"></p>
+                            <p id ="modal-enName" class="en-name"></p>
+                        </div>
+                        <div class="modal-descript">
+                            <p id="modal-role" class="modal-role"></p>
+                            <p id="modal-desc"></p>
+                            <p id="modal-email"></p>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -1,0 +1,73 @@
+{
+  "KWK": {
+    "name": "김우경",
+    "enName": "Wookyung Kim",
+    "role": "Master's student",
+    "desc": "Detailed description about Wookyung Kim.",
+    "email": "kildeok@hanyang.ac.kr"
+  },
+
+  "YYC": {
+    "name": "양윤철",
+    "enName": "Yunchul Yang",
+    "role": "Master's student",
+    "desc": "Detailed description about Yunchul Yang.",
+    "email": "yun010124@hanyang.ac.kr"
+  },
+
+  "SYW": {
+    "name": "서영운",
+    "enName": "Youngwoon Seo",
+    "role": "Master's student",
+    "desc": "Detailed description about Youngwoon Seo.",
+    "email": "@hanyang.ac.kr"
+  },
+  
+  "HCJ": {
+    "name": "허창준",
+    "enName": "Changjun Heo",
+    "role": "Master's student",
+    "desc": "Detailed description about Changjun Heo.",
+    "email": "gjckdwns1@hanyang.ac.kr"
+  },
+  
+  "KKW": {
+    "name": "고건우",
+    "enName": "Keonwoo Koh",
+    "role": "Master's student",
+    "desc": "Detailed description about Keonwoo Koh.",
+    "email": "@hanyang.ac.kr"
+  },
+
+  "KKK": {
+    "name": "김김김",
+    "enName": "KKK",
+    "role": "Master's student",
+    "desc": "Detailed description about KKK.",
+    "email": "@hanyang.ac.kr"
+  },
+
+  "OWJ": {
+    "name": "오원준",
+    "enName": "Wonjun Oh",
+    "role": "Undergraduate student",
+    "desc": "Detailed description about Wonjun Oh.",
+    "email": "jingojun@hanyang.ac.kr"
+  },
+
+  "KSE": {
+    "name": "김성은",
+    "enName": "Seongeun Kim",
+    "role": "Undergraduate student",
+    "desc": "Detailed description about Seongeun Kim.",
+    "email": "@hanyang.ac.kr"
+  },
+
+  "LDW": {
+    "name": "이다원",
+    "enName": "Dawon Lee",
+    "role": "Undergraduate student",
+    "desc": "Detailed description about Dawon Lee.",
+    "email": "@hanyang.ac.kr"
+  }
+}
