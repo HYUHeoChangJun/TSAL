@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(response => response.text())
         .then(data => {
             document.body.insertAdjacentHTML("afterbegin", data);
+
+            initHeader();
         });
 
     // footer.html을 가져와서 삽입
@@ -14,30 +16,68 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    const dropdowns = document.querySelectorAll(".dropdown");
-    // dropdown menu
-    dropdowns.forEach(dropdown => {
-        dropdown.addEventListener("mouseenter", () => {
-            dropdown.querySelector(".dropdown-menu").style.display = "block";
-        });
+function initHeader() {
+  const menu = document.querySelector(".menu");
+  const toggleBtn = document.querySelector(".menu-toggle");
+  const dropdowns = document.querySelectorAll(".dropdown");
 
-        dropdown.addEventListener("mouseleave", () => {
-            dropdown.querySelector(".dropdown-menu").style.display = "none";
-        });
+  if (!menu || !toggleBtn) return;
+
+  // 기본 닫힘
+  menu.classList.remove("active");
+
+  // 햄버거 토글
+  toggleBtn.addEventListener("click", () => {
+    menu.classList.toggle("active");
+  });
+
+  // ✅ "실제 링크" 클릭 시에만 메뉴 닫기
+  // (상위 메뉴 About/Members 같은 건 href가 없으니 제외)
+  menu.querySelectorAll("a[href]").forEach(link => {
+    link.addEventListener("click", () => {
+      menu.classList.remove("active");
+      // 드롭다운 열림 상태도 정리
+      document.querySelectorAll(".dropdown").forEach(d => d.classList.remove("open"));
     });
-});
+  });
 
-// 햄버거 버튼 클릭 시 메뉴 열고 닫기
-function toggleMenu() {
-    const menu = document.querySelector('.menu');
-    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+  // PC hover (430px 초과에서만)
+  dropdowns.forEach(dropdown => {
+    dropdown.addEventListener("mouseenter", () => {
+      if (window.innerWidth > 430) {
+        dropdown.querySelector(".dropdown-menu").style.display = "block";
+      }
+    });
+    dropdown.addEventListener("mouseleave", () => {
+      if (window.innerWidth > 430) {
+        dropdown.querySelector(".dropdown-menu").style.display = "none";
+      }
+    });
+  });
+
+  // ✅ 모바일 드롭다운 클릭 열기
+  initMobileDropdown();
 }
 
-function closeMenu() {
-    const menu = document.querySelector(".menu");
-    menu.style.display = "none";
+function initMobileDropdown() {
+  if (window.innerWidth > 430) return;
+
+  document.querySelectorAll(".dropdown > a").forEach(link => {
+    link.addEventListener("click", e => {
+      e.preventDefault();
+
+      const parent = link.parentElement;
+
+      // 아코디언
+      document.querySelectorAll(".dropdown").forEach(d => {
+        if (d !== parent) d.classList.remove("open");
+      });
+
+      parent.classList.toggle("open");
+    });
+  });
 }
+
 
 document.addEventListener("DOMContentLoaded", function () {
     // 현재 페이지의 URL을 확인하여 메뉴 강조 표시

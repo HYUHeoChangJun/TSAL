@@ -715,4 +715,10 @@ td.title:hover {
         flex-direction: column;
         align-items: center;
     }
+    .modal-content {
+        max-width: 80%;
+    }
+    .meta {
+        font-size: 2vw;
+    }
 }
