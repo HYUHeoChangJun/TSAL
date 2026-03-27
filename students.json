@@ -36,23 +36,15 @@
     "enName": "Keonwoo Koh",
     "role": "Master's student",
     "desc": "Detailed description about Keonwoo Koh.",
-    "email": "@hanyang.ac.kr"
+    "email": "kwkoh01@hanyang.ac.kr"
   },
 
   "KKK": {
-    "name": "김김김",
-    "enName": "KKK",
+    "name": "김준구",
+    "enName": "Jungu Kim",
     "role": "Master's student",
     "desc": "Detailed description about KKK.",
-    "email": "@hanyang.ac.kr"
-  },
-
-  "OWJ": {
-    "name": "오원준",
-    "enName": "Wonjun Oh",
-    "role": "Undergraduate student",
-    "desc": "Detailed description about Wonjun Oh.",
-    "email": "jingojun@hanyang.ac.kr"
+    "email": "rlawnsrn0607@hanyang.ac.kr"
   },
 
   "KSE": {

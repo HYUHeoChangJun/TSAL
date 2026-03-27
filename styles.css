@@ -33,8 +33,6 @@ video {
     transform: translate(-50%, -50%);
 }
 
-
-
 .slogan {
     font-family: "Montserrat", sans-serif;
     font-size: 10vw;
@@ -63,6 +61,7 @@ video {
     height: 100%;
     object-fit: cover;
 }
+
 /* 이미지 리스트 컨테이너 */
 .main .sec1-2 .p1 {
     display: flex;
@@ -70,6 +69,7 @@ video {
     align-items: center;
     overflow: hidden;
 }
+
 .main .sec1-2 .lists {
     display: flex;
     justify-content: center;
